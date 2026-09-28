@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zap, Activity, BookOpen, Server, GitBranch } from "lucide-react";
+import { Zap, Activity, Server, GitBranch, Box } from "lucide-react";
 
 export default function Navbar({ activePage }) {
   return (
@@ -23,19 +23,14 @@ export default function Navbar({ activePage }) {
           <span>Operations Cockpit</span>
         </Link>
 
-        <Link href="/research" className={`nav-link-btn ${activePage === "research" ? "active" : ""}`}>
-          <BookOpen size={14} />
-          <span>Research & Docs</span>
-        </Link>
-
         <a
-          href="/api/status"
+          href="/api/telemetry"
           target="_blank"
           className="nav-link-btn"
           style={{ fontFamily: "var(--font-mono)", fontSize: 12 }}
         >
           <Server size={13} />
-          <span>/api/status</span>
+          <span>/api/telemetry</span>
         </a>
 
         <a
@@ -45,7 +40,7 @@ export default function Navbar({ activePage }) {
           className="nav-link-btn"
         >
           <GitBranch size={13} />
-          <span>Repo</span>
+          <span>GitHub Docs & Code</span>
         </a>
       </nav>
     </header>
